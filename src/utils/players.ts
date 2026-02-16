@@ -11,17 +11,9 @@ import { PlayersProps } from "@/types";
  */
 export const getMoviePlayers = (id: string | number, startAt?: number): PlayersProps[] => {
   return [
-        {
-      title: "VidLink",
-      source: `https://vidfast.pro/movie/${id}?autoPlay=false&startAt=${startAt || ""}`,
-      recommended: true,
-      fast: true,
-      ads: true,
-      resumable: true,
-    },
     {
       title: "VidLink",
-      source: `https://vidlink.pro/movie/${id}?player=jw&primaryColor=006fee&secondaryColor=a2a2a2&iconColor=eefdec&autoplay=false&startAt=${startAt || ""}`,
+      source: `https://vidlink.pro/movie/${id}?primaryColor=006fee&secondaryColor=a2a2a2&iconColor=eefdec&autoplay=false&startAt=${startAt || ""}`,
       recommended: true,
       fast: true,
       ads: true,
@@ -30,6 +22,14 @@ export const getMoviePlayers = (id: string | number, startAt?: number): PlayersP
     {
       title: "VidLink 2",
       source: `https://vidlink.pro/movie/${id}?primaryColor=006fee&autoplay=false&startAt=${startAt}`,
+      recommended: true,
+      fast: true,
+      ads: true,
+      resumable: true,
+    },
+    {
+      title: "VidLink",
+      source: `https://vidfast.pro/movie/${id}?autoPlay=false&startAt=${startAt || ""}`,
       recommended: true,
       fast: true,
       ads: true,
